@@ -1,1 +1,281 @@
-hello world
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktails by Mahmut</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Temel stil */
+      body,
+      html {
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      #loading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fefbfa;
+        z-index: 10;
+        padding: 20px;
+        box-sizing: border-box;
+        animation: fadeOut 0.5s ease 5s forwards;
+      }
+
+      #loading img {
+        width: 350px;
+        height: auto;
+        margin-bottom: 0px;
+      }
+
+      #loading p {
+        font-size: 1.5em;
+        color: #e74c3c;
+        font-family: "Lobster", cursive;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes fadeOut {
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
+      /* Menü Stilleri */
+      .menu-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background-color: #fefbfa;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        animation: slideDown 0.8s ease 5s forwards;
+        overflow-y: auto;
+      }
+
+      .menu-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        top: -250px;
+        width: 100%;
+        height: 200%;
+        background-image: url(/kokteylresimleri/firmalogokucuk.png);
+        background-size: 330px, 1px, contain;
+        background-position: center;
+        opacity: 0.1;
+        z-index: -1;
+        overflow: hidden;
+        transform: skewY(30deg);
+      }
+      h1 {
+        text-align: center;
+        color: #e74c3c;
+        font-family: "Lobster", cursive;
+        font-size: 2em;
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      .kokteyl-resim {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: cover;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Resme gölge eklenmiştir */
+      }
+
+      .kokteyl-ad {
+        font-weight: bold;
+        font-size: 1.2em;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+      }
+
+      .aciklama {
+        font-size: 0.9em;
+        color: #666;
+        font-style: italic;
+        margin-top: 0px;
+        font-weight: 500; /* Biraz daha kalın */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+      }
+
+      .fiyat {
+        font-weight: bold;
+        font-size: 0.9em;
+        color: #e74c3c;
+        font-style: italic;
+        margin-top: 5px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+      }
+      .fiyat del {
+        font-weight: bold;
+        color: #666;
+        font-style: italic;
+        margin-right: 5px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+      }
+
+      /* Menü Animasyonu */
+      @keyframes slideDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">
+      <img
+        src="/kokteylresimleri/firmalogokucuk.png"
+        alt="Cocktails by Mahmut Logo"
+      />
+      <p>Delicious cocktails are being prepared for you...</p>
+    </div>
+    <div class="menu-container">
+      <h1>Mahmut's Cocktail Menu</h1>
+      <ul>
+        <li>
+          <img
+            src="/kokteylresimleri/cintonik.png"
+            alt="Gin Tonic"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Gin Tonic</span>
+            <p class="aciklama">
+              Cin, tonik su ve bir dilim limonla ferahlatıcı bir kokteyl.
+            </p>
+            <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/whiskeysour.png"
+            alt="Whiskey Sour"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Whiskey Sour</span>
+            <p class="aciklama">
+              Viski, limon suyu ve bir miktar şeker ile hazırlanan klasik bir
+              içecek.
+            </p>
+            <p class="fiyat"><del>450.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/vodkalimon.png"
+            alt="Vodka Lemon"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Vodka Lemon</span>
+            <p class="aciklama">
+              Votka ve taze limon suyu ile kolayca hazırlanabilen bir kokteyl.
+            </p>
+            <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/tomcollins.png"
+            alt="Tom Collins"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Tom Collins</span>
+            <p class="aciklama">
+              Cin, limon suyu, şeker şurubu ve soda ile hazırlanan hafif bir
+              içecek.
+            </p>
+            <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/moscowmule.png"
+            alt="Moscow Mule"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Moscow Mule</span>
+            <p class="aciklama">
+              Votka, zencefilli bira ve lime ile yapılan serinletici bir
+              kokteyl.
+            </p>
+            <p class="fiyat"><del>550.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="kokteylresimleri/oldfashioned.png"
+            alt="Old Fashioned"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Old Fashioned</span>
+            <p class="aciklama">
+              Viski, şeker, su ve bitter ile yapılan zamansız bir kokteyl.
+            </p>
+            <p class="fiyat"><del>450.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
