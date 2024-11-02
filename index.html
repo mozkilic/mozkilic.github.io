@@ -12,8 +12,8 @@
       /* Temel stil */
       body,
       html {
+        background-color: #FEFBFA;
         font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4;
         color: #333;
         height: 100%;
         margin: 0;
@@ -103,7 +103,7 @@
         overflow-y: auto;
       }
 
-      .menu-container::before {
+      /* .menu-container::before {
         content: "";
         position: absolute;
         top: 0;
@@ -118,7 +118,7 @@
         z-index: -1;
         overflow: hidden;
         transform: skewY(30deg);
-      }
+      } */
 
       h1 {
         text-align: center;
@@ -186,6 +186,8 @@
       }
 
       .aciklama {
+        text-wrap: wrap;
+        text-wrap-mode: normal;
         font-size: 0.9em;
         color: #666;
         font-style: italic;
@@ -247,7 +249,7 @@
           <div>
             <span class="kokteyl-ad">Gin Tonic</span>
             <p class="aciklama">
-              Çilekli cin, tonik su ve bir dilim limonla ferahlatıcı bir
+              Çilekli Gibson's, tonik su ve bir dilim limonla ferahlatıcı bir
               kokteyl.
             </p>
             <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
@@ -262,8 +264,8 @@
           <div>
             <span class="kokteyl-ad">Whiskey Sour</span>
             <p class="aciklama">
-              Viski, limon suyu ve bir miktar şeker ile hazırlanan klasik bir
-              içecek.
+              Jack Daniel's viski, limon suyu ve bir miktar şeker ile hazırlanan
+              klasik bir içecek.
             </p>
             <p class="fiyat"><del>450.00₺</del> 0.00₺</p>
           </div>
@@ -291,8 +293,8 @@
           <div>
             <span class="kokteyl-ad">Tom Collins</span>
             <p class="aciklama">
-              Çilekli cin, limon suyu, şeker şurubu ve soda ile hazırlanan hafif
-              bir içecek.
+              Çilekli Gibson's, limon suyu, şeker şurubu ve soda ile hazırlanan
+              hafif bir içecek.
             </p>
             <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
           </div>
@@ -321,7 +323,8 @@
           <div>
             <span class="kokteyl-ad">Old Fashioned</span>
             <p class="aciklama">
-              Viski, şeker, su ve bitter ile yapılan zamansız bir kokteyl.
+              Jack Daniel's viski, şeker, su ve bitter ile yapılan zamansız bir
+              kokteyl.
             </p>
             <p class="fiyat"><del>450.00₺</del> 0.00₺</p>
           </div>
@@ -338,8 +341,8 @@
               <span class="sefin-secimi">Şefiniz Öneriyor...</span></span
             >
             <p class="aciklama">
-              Çilekli cin, limon suyu, şeker şurubu ve soda ile yapılan köpüklü
-              bir kokteyl.
+              Çilekli Gibson's, limon suyu, şeker şurubu ve soda ile yapılan
+              köpüklü bir kokteyl.
             </p>
             <p class="fiyat"><del>400.00₺</del> 0.00₺</p>
           </div>
@@ -356,23 +359,58 @@
           <div>
             <span class="kokteyl-ad">Tequila Shot</span>
             <p class="aciklama">
-              Tekila, bir dilim limon ve tuz ile servis edilen klasik bir shot.
+              Altos tekila, bir dilim limon ve tuz ile servis edilen klasik bir
+              shot.
             </p>
             <p class="fiyat"><del>300.00₺</del> 0.00₺</p>
           </div>
         </li>
         <li>
           <img
-            src="/kokteylresimleri/viskiShot.png"
+            src="/kokteylresimleri/jackshot.png"
             alt="Whiskey Shot"
             class="kokteyl-resim"
           />
           <div>
             <span class="kokteyl-ad">Whiskey Shot</span>
             <p class="aciklama">
-              Kaliteli viski ile sade olarak servis edilen klasik bir shot.
+              Jack Daniel's viski ile sade olarak servis edilen klasik bir shot.
             </p>
             <p class="fiyat"><del>320.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/aciliviski.png"
+            alt="Spicy Jack Daniel's Shot"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Spicy Jack Daniel's Shot 🌶️</span>
+            <p class="aciklama">
+              Acılı Jack Daniel's viski, kırmızı biber ile tatlandırılmış,
+              damakta sıcak bir etki bırakan özel bir shot.
+            </p>
+            <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+      </ul>
+      <h2 class="section-title">Özel İçecekler</h2>
+      <ul>
+        <li>
+          <img
+            src="/kokteylresimleri/tekillalibira.png"
+            alt="Tekillalı Bira"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Tekillalı Bira</span>
+            <p class="aciklama">
+              50cl soğuk Tuborg Gold, cesur bir shot Altos tekila ile buluşur;
+              kenarı tuzla kaplanmış bardakta sunulan, damakta eşsiz bir
+              deneyim.
+            </p>
+            <p class="fiyat"><del>120.00₺</del> 0.00₺</p>
           </div>
         </li>
       </ul>
