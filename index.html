@@ -179,6 +179,7 @@
       }
 
       .sefin-secimi {
+        font-family: "Lobster", cursive; /* Yazı tipi değiştirildi */
         font-size: 0.9em;
         font-weight: bold;
         color: #d90c00;
@@ -210,6 +211,14 @@
         font-style: italic;
         margin-right: 5px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+      }
+
+      .stok-uyari {
+        font-family: "Lobster", cursive; /* Yazı tipi değiştirildi */
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #d90c00; /* Uyarı renginde kırmızı */
+        margin-left: 5px;
       }
 
       /* Menü Animasyonu */
@@ -300,19 +309,25 @@
             <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
           </div>
         </li>
-        <li>
+        <li style="opacity: 0.5">
           <img
             src="/kokteylresimleri/moscowmule.png"
             alt="Moscow Mule"
             class="kokteyl-resim"
           />
           <div>
-            <span class="kokteyl-ad">Moscow Mule</span>
+            <span class="kokteyl-ad">
+              <del>Moscow Mule</del> <span class="stok-uyari">...Tükendi!</span>
+            </span>
             <p class="aciklama">
-              Votkanın zencefilli bira ve lime ile buluştuğu, tropik esintiler
-              taşıyan, serinletici bir klasik.
+              <del
+                >Votkanın zencefilli bira ve lime ile buluştuğu, tropik
+                esintiler taşıyan, serinletici bir klasik.</del
+              >
             </p>
-            <p class="fiyat"><del>550.00₺</del> 0.00₺</p>
+            <p class="fiyat">
+              <del>550.00₺</del> <span style="color: #d90c00">...Tükendi!</span>
+            </p>
           </div>
         </li>
         <li>
@@ -413,6 +428,42 @@
               rimlenmiş bardakta sunulan, unutulmaz bir deneyim.
             </p>
             <p class="fiyat"><del>120.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="section-title">Bira</h2>
+      <ul>
+        <li>
+          <img
+            src="/kokteylresimleri/blanc.png"
+            alt="Blanc 33cl"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad"
+              >Blanc 33cl<span class="stok-uyari">...Tükeniyor!</span></span
+            >
+            <p class="aciklama">
+              Belçika esintileri taşıyan Blanc, 33cl hacmiyle yoğun lezzet sunan
+              özel bir bira.
+            </p>
+            <p class="fiyat"><del>70.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/tuborg.png"
+            alt="Tuborg Gold 50cl"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Tuborg Gold 50cl</span>
+            <p class="aciklama">
+              Klasik Tuborg Gold’un 50cl’lik sunumu; yoğun biralar arasında
+              ferahlatıcı bir tercih.
+            </p>
+            <p class="fiyat"><del>90.00₺</del> 0.00₺</p>
           </div>
         </li>
       </ul>
