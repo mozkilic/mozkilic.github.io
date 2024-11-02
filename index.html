@@ -23,6 +23,26 @@
         overflow: hidden;
       }
 
+      .section-title {
+        font-size: 1.5em;
+        color: #d90c00;
+        font-family: "Lobster", cursive; /* Yazı tipi değiştirildi */
+        font-weight: bold;
+        margin: 30px 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Sağ tarafa dayalı yapar */
+        position: relative;
+      }
+
+      .section-title::before {
+        content: "";
+        flex-grow: 1;
+        height: 1px;
+        background-color: #d90c00; /* Çizgi rengi */
+        margin-right: 10px; /* Başlıkla çizgi arasındaki boşluk */
+      }
+
       #loading {
         display: flex;
         flex-direction: column;
@@ -99,12 +119,28 @@
         overflow: hidden;
         transform: skewY(30deg);
       }
+
       h1 {
         text-align: center;
         color: #e74c3c;
         font-family: "Lobster", cursive;
         font-size: 2em;
         margin-bottom: 15px;
+      }
+
+      .info {
+        text-align: center;
+        font-size: 0.8em;
+        color: #999;
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 1.5em;
+        color: #d90c00;
+        font-weight: bold;
+        margin: 30px 0 15px;
+        text-align: center;
       }
 
       ul {
@@ -134,18 +170,27 @@
       }
 
       .kokteyl-ad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-weight: bold;
         font-size: 1.2em;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+      }
+
+      .sefin-secimi {
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #d90c00;
+        margin-left: auto;
       }
 
       .aciklama {
         font-size: 0.9em;
         color: #666;
         font-style: italic;
-        margin-top: 0px;
-        font-weight: 500; /* Biraz daha kalın */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+        font-weight: 500;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
       }
 
       .fiyat {
@@ -154,14 +199,15 @@
         color: #e74c3c;
         font-style: italic;
         margin-top: 5px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
       }
+
       .fiyat del {
         font-weight: bold;
         color: #666;
         font-style: italic;
         margin-right: 5px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Hafif gölge efekti */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
       }
 
       /* Menü Animasyonu */
@@ -186,7 +232,11 @@
       <p>Delicious cocktails are being prepared for you...</p>
     </div>
     <div class="menu-container">
-      <h1>Mahmut's Cocktail Menu</h1>
+      <h1>Menu</h1>
+      <p class="info">* Görseller temsilidir</p>
+
+      <!-- Klasik Kokteyller Bölümü -->
+      <h2 class="section-title">Klasik Kokteyller</h2>
       <ul>
         <li>
           <img
@@ -197,7 +247,8 @@
           <div>
             <span class="kokteyl-ad">Gin Tonic</span>
             <p class="aciklama">
-              Cin, tonik su ve bir dilim limonla ferahlatıcı bir kokteyl.
+              Çilekli cin, tonik su ve bir dilim limonla ferahlatıcı bir
+              kokteyl.
             </p>
             <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
           </div>
@@ -240,8 +291,8 @@
           <div>
             <span class="kokteyl-ad">Tom Collins</span>
             <p class="aciklama">
-              Cin, limon suyu, şeker şurubu ve soda ile hazırlanan hafif bir
-              içecek.
+              Çilekli cin, limon suyu, şeker şurubu ve soda ile hazırlanan hafif
+              bir içecek.
             </p>
             <p class="fiyat"><del>350.00₺</del> 0.00₺</p>
           </div>
@@ -273,6 +324,55 @@
               Viski, şeker, su ve bitter ile yapılan zamansız bir kokteyl.
             </p>
             <p class="fiyat"><del>450.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/cinfizz.png"
+            alt="Gin Fizz"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad"
+              >Gin Fizz
+              <span class="sefin-secimi">Şefiniz Öneriyor...</span></span
+            >
+            <p class="aciklama">
+              Çilekli cin, limon suyu, şeker şurubu ve soda ile yapılan köpüklü
+              bir kokteyl.
+            </p>
+            <p class="fiyat"><del>400.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+      </ul>
+      <h2 class="section-title">Shotlar</h2>
+      <ul>
+        <li>
+          <img
+            src="/kokteylresimleri/tekilashot.png"
+            alt="Tequila Shot"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Tequila Shot</span>
+            <p class="aciklama">
+              Tekila, bir dilim limon ve tuz ile servis edilen klasik bir shot.
+            </p>
+            <p class="fiyat"><del>300.00₺</del> 0.00₺</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="/kokteylresimleri/viskishot.png"
+            alt="Whiskey Shot"
+            class="kokteyl-resim"
+          />
+          <div>
+            <span class="kokteyl-ad">Whiskey Shot</span>
+            <p class="aciklama">
+              Kaliteli viski ile sade olarak servis edilen klasik bir shot.
+            </p>
+            <p class="fiyat"><del>320.00₺</del> 0.00₺</p>
           </div>
         </li>
       </ul>
